@@ -31,17 +31,27 @@ function generatePassword(v, w, x, y, z,)
     randNum = Math.floor(Math.random() * lowerLetters.length);
     password = password + lowerLetters[randNum];
     passwordLength = passwordLength - 1;
-    console.log(password);
   }
   if(x) {
     passwordChars = passwordChars.concat(upperLetters);
+    randNum = Math.floor(Math.random() * upperLetters.length);
+    password = password + upperLetters[randNum];
+    passwordLength = passwordLength - 1;
   }
   if(y) {
     passwordChars = passwordChars.concat(passNumbers);
+    randNum = Math.floor(Math.random() * passNumbers.length);
+    password = password + passNumbers[randNum];
+    passwordLength = passwordLength - 1;
   }
   if(z) {
     passwordChars = passwordChars.concat(specialChars);
+    randNum = Math.floor(Math.random() * specialChars.length);
+    password = password + specialChars[randNum];
+    passwordLength = passwordLength - 1;
   }
+  console.log(passwordLength);
+  return password;
 }
 
 // Add event listener to generate button
