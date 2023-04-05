@@ -25,6 +25,12 @@ function writePassword() {;
   var yesUpper = confirm('Include uppercase letters?');
   var yesNumber = confirm('Include numbers?');
   var yesSpecial = confirm('Include special characters (!,?. etc.)?');
+
+  if(!yesLower && !yesUpper && !yesNumber && !yesSpecial){
+    alert('Please choose at least one set of characters to use for your password!')
+    return;
+  }
+  
   var password = generatePassword(passwordLength, yesLower, yesUpper, yesNumber, yesSpecial);
   var passwordText = document.querySelector("#password");
 
