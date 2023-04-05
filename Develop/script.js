@@ -23,35 +23,38 @@ function generatePassword(v, w, x, y, z,)
   var specialChars = ["!","?","#","$","@","'",'"',"%","(",")","*","+",",","-","/",".",":",";","<",">","=","[","]","_","|","^","~","{","}"];
   var passwordChars = [];
   var passwordLength = v;
-  var password = "";
+  var password = [];
   var randNum;
   
   if(w) {
     passwordChars = passwordChars.concat(lowerLetters);
     randNum = Math.floor(Math.random() * lowerLetters.length);
-    password = password + lowerLetters[randNum];
+    password.push(lowerLetters[randNum]);
     passwordLength = passwordLength - 1;
   }
   if(x) {
     passwordChars = passwordChars.concat(upperLetters);
     randNum = Math.floor(Math.random() * upperLetters.length);
-    password = password + upperLetters[randNum];
+    password.push(upperLetters[randNum]);
     passwordLength = passwordLength - 1;
   }
   if(y) {
     passwordChars = passwordChars.concat(passNumbers);
     randNum = Math.floor(Math.random() * passNumbers.length);
-    password = password + passNumbers[randNum];
+    password.push(passNumbers[randNum]);
     passwordLength = passwordLength - 1;
   }
   if(z) {
     passwordChars = passwordChars.concat(specialChars);
     randNum = Math.floor(Math.random() * specialChars.length);
-    password = password + specialChars[randNum];
+    password.push(specialChars[randNum]);
     passwordLength = passwordLength - 1;
   }
-  console.log(passwordLength);
-  return password;
+  
+  //for(var i = 0; i < passwordLength - 1; i++)
+  //{
+//
+  return password.join('');
 }
 
 // Add event listener to generate button
