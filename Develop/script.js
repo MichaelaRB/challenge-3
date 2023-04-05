@@ -50,10 +50,13 @@ function generatePassword(v, w, x, y, z,)
     password.push(specialChars[randNum]);
     passwordLength = passwordLength - 1;
   }
-  
-  //for(var i = 0; i < passwordLength - 1; i++)
-  //{
-//
+  console.log(passwordChars);
+  for(var i = 0; i < passwordLength; i++)
+  {
+    randNum = Math.floor(Math.random() * passwordChars.length);
+    password.push(passwordChars[randNum]);
+    console.log(randNum);
+  }
   return password.join('');
 }
 
