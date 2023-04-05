@@ -3,7 +3,24 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {;
-  var passwordLength = Number(prompt('How many characters do you want in your password? Choose between 8-128'));
+  var passwordLength = prompt('How many characters do you want in your password? Choose between 8-128');
+   
+  if(passwordLength === null){
+    return;
+  }
+
+  passwordLength = Number(passwordLength);
+
+  if(Number.isNaN(passwordLength)){
+      alert('This is not a number! Please try again.');
+      return;
+    }
+
+  if(passwordLength < 8 || password > 128){
+      alert('The value is outside the acceptable range. Please choose a value between 8-128.');
+      return;
+    }
+ 
   var yesLower = confirm('Include lowercase letters?');
   var yesUpper = confirm('Include uppercase letters?');
   var yesNumber = confirm('Include numbers?');
