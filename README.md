@@ -9,7 +9,8 @@ The webpage can be accessed at https://michaelarb.github.io/password-generator/
 
 This is what the deployed website looks like:
 
-![The deployed site](./assets/deployed-password-generator.png)
+![deployed-password-generator](https://user-images.githubusercontent.com/126620642/230426857-5dbd4b06-e201-429d-8799-d026ffedf8c6.png)
+
 
 After pressing the "Generate Password" button, you will be prompted to enter a length for the password and select from four separate categories for characters to include: lowercase letters, uppercase letters, numbers, and special characters. 
 The accepted range for the length of the password is 8 to 128 characters. Any value outside this range will end the generator and alert the user that the value they chose is out of the range. If a value is entered that is not a number, such as a word (ex. writing "ten" instead of 10), the page will alert the user that the value is not a number and that they need to try again.
